@@ -2,11 +2,13 @@
 // Create a page with a blank label and a text area. When someone types into the text area, change the label to show what the person has typed.
 //
 
+// !! : you define this variable but never use it 
 let textInput = document.getElementById('label');
 let textAreaElement = document.querySelector('#textArea');
 
 textAreaElement.onkeydown = function(e){
     console.log(e.target.value);
+    // !! : user innerText not innerHTML to set the text value 
     document.getElementById('label').InnerHTML = textAreaElement;
 };
 
